@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('head'); %>
+<body>
+  <div class="home-container">
+    <h1 class="home-title">Hello there</h1>
+    <h2>You are the
+      <% if ((notes.length +1)%10 === 1 ) { %>
+        <%= notes.length+1 %> st
+      <% }else if ( (notes.length +1)%10 === 2 ) { %>
+        <%= notes.length+1  %>nd
+      <% }else if ( (notes.length +1)%10 === 2 ) { %>
+        <%= notes.length+1  %>rd
+      <% }else { %>
+        <%= notes.length+1  %>th
+      <% } %>
+      customer
+    </h2>
+    <br><br>
+    <div class="home-contents">
+      <div class="see-others-note">
+        <a href="showNotes" class="see-others-note-link">See others' notes</a>
+      </div>
+      <div class="add-note">
+        <a href="addNote" class="add-note-link">Leave a note here</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
